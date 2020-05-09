@@ -93,8 +93,8 @@ class InteligentSystems:
 
     def make_FG(x1, x2, T):
         if T == 'U':
-            return np.array([[int(x1) - 10, int(x2) + 10, 0., 1.]])
+            return np.array([[float(x1) - 10**len(x1), float(x2) + 10**len(x2), 0., 1.]])
         elif T == 'N':
-            return np.array([[int(x1) - 10, int(x2) + 10, 1., 0.]])
+            return np.array([[float(x1) - 10**len(x1), float(x2) + 10**len(x2), 1., 0.]])
         else:
             return np.array([[0., 1., 0., 1.]])
