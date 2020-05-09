@@ -13,6 +13,7 @@ import csv
 from PIL import ImageTk, Image
 from Fuzzy import path
 from InteligentSystems import InteligentSystems
+from copy import deepcopy
 
 class Example(Frame):
 
@@ -34,7 +35,7 @@ class Example(Frame):
         
 
     def show_image(self):
-        InteligentSystems.dis_help_sys(datas)
+        InteligentSystems.dis_help_sys(deepcopy(datas))
         global img
         img = ImageTk.PhotoImage(Image.open(path + "result.png"))
         self.canvas.create_image(20, 20, anchor=NW, image=img)
